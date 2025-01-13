@@ -5,7 +5,7 @@ function Signature() {
     <div>
      
 
-     <span className='text-blue-500'>Sign here <AiFillSignature /></span>
+     <span className='text-blue-500 text-lg '>Sign here <AiFillSignature className='size-8' /></span>
     </div>
   )
 }
