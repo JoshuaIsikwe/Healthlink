@@ -1,7 +1,12 @@
 import React from 'react'
 import { SignInFlow } from '../types'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import { FcGoogle } from 'react-icons/fc';
 
-interface SignInCardProps{
+interface SignUpCardProps{
   setState: (state : SignInFlow) => void;
 }
 
@@ -10,6 +15,7 @@ export const SignUpCard = ({setState}: SignUpCardProps) => {
     <Card className='h-full w-full p-8 bg-white'>
       <CardHeader className='px-0 pt-0'>
         <CardTitle>
+          <h1 className='text-lg text-blue-500 mb-4'>healthLink</h1>
           Sign to Continue
         </CardTitle>
         <CardDescription>
@@ -57,7 +63,7 @@ export const SignUpCard = ({setState}: SignUpCardProps) => {
           </Button>
         </div>
         <p className='text-muted-foreground text-xs'>
-          Already have an account? <span onClick={()=> setState("signIn")} className='text-sky-700 hover:underline cursor-pointer'>Sign Up</span>
+          Already have an account? <span onClick={()=> setState("signIn")} className='text-sky-700 hover:underline cursor-pointer'>Sign In</span>
         </p>
       </CardContent>
     </Card>

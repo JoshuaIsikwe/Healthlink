@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FcGoogle} from "react-icons/fc"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -11,7 +11,10 @@ interface SignInCardProps{
   }
 
    
-export const SignInCard = ({setState}:  SignInCardProps}) => {
+export const SignInCard = ({setState}:  SignInCardProps) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <Card className='h-full w-full p-8 bg-white'>
       <CardHeader className='px-0 pt-0'>
@@ -26,16 +29,16 @@ export const SignInCard = ({setState}:  SignInCardProps}) => {
         <form className='space-y-2.5' action="">
           <Input
             disabled={false}
-            value=""
-            onChange={() => {}}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder='Email'
             type='email'
             required
           />
           <Input
             disabled={false}
-            value=""
-            onChange={() => {}}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder='Password'
             type='password'
             required
@@ -45,7 +48,6 @@ export const SignInCard = ({setState}:  SignInCardProps}) => {
         <Separator/>
         <div className='flex flex-col gap-y-2.5'>
           <Button disabled={false}
-          onChange={() => {}}
           variant="outline"
            size='lg'
            className='w-full relative'
