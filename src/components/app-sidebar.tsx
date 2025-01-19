@@ -1,4 +1,5 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Map, Home, Inbox, Search, Settings } from "lucide-react"
+import { MdLogout } from "react-icons/md";
 
 import {
   Sidebar,
@@ -25,9 +26,9 @@ const items = [
     icon: Inbox,
   },
   {
-    title: "Calendar",
+    title: "Map",
     url: "#",
-    icon: Calendar,
+    icon: Map,
   },
   {
     title: "Settings",
@@ -38,12 +39,12 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar>
+    <Sidebar >
         <SidebarHeader>
         <h1 className='text-2xl text-blue-500 mb-4'>healthLink</h1>
         </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
+        <SidebarGroup className="flex flex-col justify-around">
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -58,6 +59,12 @@ export function AppSidebar() {
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
+          </SidebarGroupContent>
+          <SidebarGroupContent className="justify-end">
+            <div>
+              djd
+           <MdLogout/>
+            </div>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>

@@ -4,6 +4,7 @@ import { AuthScreen } from "@/features/auth/components/auth-screen"
 import Layout from './components/Layout/layout';
 import { Home } from "@/pages/Home"
 import Signature from './pages/Signature';
+import Map from './pages/Map';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Layout children={undefined} />}>
               <Route index element={<Home />} /> {/* Default child route */}
               <Route path="submit" element={<Signature />} />
+              <Route path="map" element={<Map />} />
             </Route>
           </Routes>
       </div>
